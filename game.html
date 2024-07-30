@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>GlowGambit</title>
+</head>
+<body>
+    <div id="game">
+        <div id="color-container">
+            <div class="color" id="green"></div>
+            <div class="color" id="red"></div>
+            <div class="color" id="yellow"></div>
+            <div class="color" id="blue"></div>
+        </div>
+        
+       <div>
+        <button id="start-button">comenzar</button>
+        <button id="login-button">login</button>
+        <button onclick="redirigir()">volver</button>
+
+    <script>
+        function redirigir() {
+            window.location.href = 'index.html'; // Cambia 'otra-pagina.html' por la URL de tu página destino
+        }
+    </script>
+       </div>
+
+        <div id="scoreboard">
+            <h3>Scoreboard</h3>
+            <ul id="score-list"></ul>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

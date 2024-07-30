@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>login</title>
+</head>
+<body>
+    <div id="login-container">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button id="login-submit">Login</button>
+    </div>
+    <script>
+        document.getElementById('login-submit').addEventListener('click', function() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username === 'everes' && password === '.Yeimi.08') {
+                window.location.href = 'config.html';
+            } else {
+                alert('Usuario o contraseña incorrectos');
+            }
+        });
+    </script>
+</body>
+</html>

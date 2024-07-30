@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>username</title>
+</head>
+<body>
+    <div id="username-container">
+        <h1>Oee! escriba su nombre aqui abajo</h1>
+        <input type="text" id="username-input" placeholder="Aqui!!!">
+        <button id="play-button">vamos pues</button>
+    </div>
+    <script>
+        document.getElementById('play-button').addEventListener('click', function() {
+            const username = document.getElementById('username-input').value;
+            if (username) {
+                localStorage.setItem('username', username);
+                window.location.href = 'game.html';
+            } else {
+                alert('escriba su nombre para que no le hagan reten omee!!.');
+            }
+        });
+    </script>
+</body>
+</html>

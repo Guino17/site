@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>configuracion</title>
+</head>
+<body>
+    <div id="config-container">
+        <h1>Configuración GlowGambit</h1>
+        <div>
+            <label for="green-color">Green Color:</label>
+            <input type="color" id="green-color" value="#00ff00">
+        </div>
+        <div>
+            <label for="red-color">Red Color:</label>
+            <input type="color" id="red-color" value="#ff0000">
+        </div>
+        <div>
+            <label for="yellow-color">Yellow Color:</label>
+            <input type="color" id="yellow-color" value="#ffff00">
+        </div>
+        <div>
+            <label for="blue-color">Blue Color:</label>
+            <input type="color" id="blue-color" value="#0000ff">
+        </div>
+        <div>
+        <button id="save-colors">Guardar colores</button>
+        <button id="clear-scoreboard">eliminar puntuaciones</button>
+        <button onclick="redirigir()">volver</button>
+
+    <script>
+        function redirigir() {
+            window.location.href = 'game.html'; // Cambia 'otra-pagina.html' por la URL de tu página destino
+        }
+    </script>
+        </div>
+    </div>
+    <script>
+        document.getElementById('save-colors').addEventListener('click', function() {
+            const green = document.getElementById('green-color').value;
+            const red = document.getElementById('red-color').value;
+            const yellow = document.getElementById('yellow-color').value;
+            const blue = document.getElementById('blue-color').value;
+            localStorage.setItem('colors', JSON.stringify({ green, red, yellow, blue }));
+            alert('Colores guardados');
+        });
+
+        document.getElementById('clear-scoreboard').addEventListener('click', function() {
+            localStorage.removeItem('scoreboard');
+            alert('puntuaciones eliminadas');
+        });
+    </script>
+</body>
+</html>

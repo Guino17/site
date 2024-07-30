@@ -1,0 +1,118 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+}
+
+#username-container, #game, #login-container, #config-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#username-container, #login-container, #config-container {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#username-input, #username, #password, input[type="color"] {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #696969;
+    border: none;
+    border-radius: 5px;
+    margin: 2px; /* Espacio entre botones */
+}
+
+#color-container {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(2, 150px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.color {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.3s, box-shadow 0.3s;
+}
+
+.color.active {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+#green {
+    background-color: green;
+}
+
+#red {
+    background-color: red;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#blue {
+    background-color: rgb(88, 88, 255);
+}
+
+#scoreboard {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#scoreboard h3 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+#score-list {
+    list-style: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
+@media (max-width: 600px) {
+    #scoreboard {
+        width: 293px;
+        height: 180px;
+        top: 5px;
+        right: 30px;   
+    }
+
+    #score-list {
+        font-size: 12px;
+    }
+}
